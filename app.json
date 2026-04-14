@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "NamazPro",
+    "slug": "namazpro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a472a"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.namazpro.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Namaz vakitlerini ve yakındaki camileri göstermek için konumunuza ihtiyacımız var.",
+        "NSLocationAlwaysUsageDescription": "Namaz vakti bildirimlerini göstermek için konumunuza ihtiyacımız var."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a472a"
+      },
+      "package": "com.namazpro.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#1a472a",
+          "sounds": ["./assets/ezan.wav"]
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Namaz vakitlerini hesaplamak için konumunuza ihtiyacımız var."
+        }
+      ]
+    ]
+  }
+}
